@@ -14,17 +14,17 @@ interface Person {
 export default function App() {
   const avatars = [
     {
-      id: "Wayne_20240711",
+      id: "cc2984a6003a4d5194eb58a4ad570337",
       name: "Avatar 1",
       image: "/avatars/cc2984a6003a4d5194eb58a4ad570337.webp"
     },
     {
-      id: "Wayne_20240711",
+      id: "ef08039a41354ed5a20565db899373f3",
       name: "Avatar 2",
       image: "/avatars/ef08039a41354ed5a20565db899373f3.webp"
     },
     {
-      id: "Eric_public_pro2_20230608",
+      id: "fa7b34fe0b294f02b2fca6c1ed2c7158",
       name: "Avatar 3",
       image: "/avatars/fa7b34fe0b294f02b2fca6c1ed2c7158.webp"
     },

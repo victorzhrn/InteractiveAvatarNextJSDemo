@@ -11,7 +11,7 @@ export default function LiveAvatarPage() {
   const avatarId = params.avatar_id as string;
 
   return (
-    <div className="w-screen h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-gradient-to-br from-pink-300 via-purple-300 to-blue-300">
       <div className="w-[900px] flex flex-col items-start justify-start gap-5 mx-auto pt-4 pb-20">
         <div className="w-full">
           <InteractiveAvatar initialAvatarId={avatarId} autoStartVoiceMode={true} />
