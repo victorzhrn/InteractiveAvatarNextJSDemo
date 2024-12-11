@@ -5,32 +5,42 @@ import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import Link from 'next/link'
 
-interface Person {
+interface Avatar {
+  id: string
   name: string
   image: string
-  role: string
+  title: string
+  description: string
 }
 
 export default function App() {
-  const avatars = [
+  const avatars: Avatar[] = [
     {
       id: "cc2984a6003a4d5194eb58a4ad570337",
-      name: "Avatar 1",
+      name: "Tech Bro Tony",
+      title: "Tipsy Tech CEO",
+      description: "Mixing code with cocktails, pitching AI-powered everything while keeping his whiskey level steady.",
       image: "/avatars/cc2984a6003a4d5194eb58a4ad570337.webp"
     },
     {
       id: "ef08039a41354ed5a20565db899373f3",
-      name: "Avatar 2",
+      name: "Mad Max the Inventor",
+      title: "Buzzed Builder",
+      description: "Creating chaos with contraptions and beer-powered breakthroughs. Warning: Ideas may be wilder than they appear.",
       image: "/avatars/ef08039a41354ed5a20565db899373f3.webp"
     },
     {
       id: "fa7b34fe0b294f02b2fca6c1ed2c7158",
-      name: "Avatar 3",
+      name: "Stella Starship",
+      title: "Space Pioneer",
+      description: "Taking happy hour to new heights with interplanetary highways and cosmic cocktails.",
       image: "/avatars/fa7b34fe0b294f02b2fca6c1ed2c7158.webp"
     },
     {
       id: "Shawn_Therapist_public",
-      name: "Shawn Therapist",
+      name: "Fabulous Fiona",
+      title: "Fashion Maven",
+      description: "Serving looks and laughs with a side of martini-inspired fashion philosophy.",
       image: "/avatars/Shawn_Therapist_public.webp"
     }
   ];
@@ -61,26 +71,38 @@ export default function App() {
           </Button>
         </section>
 
-        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto px-4">
           {avatars.map((avatar) => (
             <Link 
               key={avatar.id}
               href={`/live/${avatar.id}`}
-              className="block"
+              className="block group"
             >
-              <div 
-                className="bg-white/80 backdrop-blur-sm rounded-xl overflow-hidden shadow-xl transform hover:rotate-2 transition-transform cursor-pointer"
-              >
-                <Image
-                  src={avatar.image}
-                  alt={avatar.name}
-                  width={300}
-                  height={300}
-                  className="w-full h-64 object-cover"
-                  priority
-                />
-                <div className="p-6">
-                  <h3 className="text-xl sm:text-2xl font-normal mb-2">{avatar.name}</h3>
+              <div className="bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+                <div className="flex flex-col md:flex-row">
+                  <div className="md:w-1/2">
+                    <Image
+                      src={avatar.image}
+                      alt={avatar.name}
+                      width={300}
+                      height={300}
+                      className="w-full h-64 md:h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
+                      priority
+                    />
+                  </div>
+                  <div className="md:w-1/2 p-6 flex flex-col justify-center">
+                    <h3 className="text-2xl font-normal mb-2">{avatar.name}</h3>
+                    <p className="text-xl text-purple-600 font-medium mb-3">{avatar.title}</p>
+                    <p className="text-gray-600">{avatar.description}</p>
+                    <div className="mt-4">
+                      <span className="inline-flex items-center text-sm text-purple-500 group-hover:text-purple-700">
+                        Chat now 
+                        <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </Link>
