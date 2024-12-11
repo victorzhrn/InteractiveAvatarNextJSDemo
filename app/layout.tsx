@@ -1,59 +1,51 @@
-import "@/styles/globals.css";
-import clsx from "clsx";
-import { Metadata, Viewport } from "next";
+import './globals.css'
+import { Righteous } from 'next/font/google'
+import { ThemeProvider } from "@/components/theme-provider"
 
-import { Providers } from "./providers";
+const righteous = Righteous({ weight: '400', subsets: ['latin'] })
 
-import { Fira_Code as FontMono, Inter as FontSans } from "next/font/google";
-import NavBar from "@/components/NavBar";
-
-const fontSans = FontSans({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
-
-const fontMono = FontMono({
-  subsets: ["latin"],
-  variable: "--font-geist-mono",
-});
-
-export const metadata: Metadata = {
-  title: {
-    default: "Boozy Truth",
-    template: `%s - Boozy Truth`,
-  },
+export const metadata = {
+  title: 'Boozy Truths - Where Deep Thoughts Meet Deep Drinks',
+  description: 'Join our hilariously inebriated journey through life\'s big questions. Warning: May cause uncontrollable laughter and mild confusion.',
   icons: {
-    icon: "/boozytrush-logo.png",
+    icon: [
+      {
+        url: '/boozytrush-logo.png',
+        sizes: '32x32',
+        type: 'image/png',
+      },
+      {
+        url: '/boozytrush-logo.png',
+        sizes: '16x16',
+        type: 'image/png',
+      }
+    ],
+    apple: {
+      url: '/boozytrush-logo.png',
+      sizes: '180x180',
+      type: 'image/png',
+    },
   },
-};
-
-export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
-  ],
-};
+}
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
-    <html
-      suppressHydrationWarning
-      lang="en"
-      className={`${fontSans.variable} ${fontMono.variable} font-sans`}
-    >
-      <head />
-      <body className={clsx("min-h-screen bg-background antialiased")}>
-        <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-          <main className="relative flex flex-col h-screen w-screen">
-            <NavBar />
-            {children}
-          </main>
-        </Providers>
+    <html lang="en" suppressHydrationWarning>
+      <body>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
-  );
+  )
 }
+
