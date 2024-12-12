@@ -54,20 +54,20 @@ export default function InteractiveAvatar({
   const [isReady, setIsReady] = useState(false);
 
   // Add useEffect for component initialization
-  // useEffect(() => {
-  //   setIsReady(true);
-  // }, []);
+  useEffect(() => {
+    setIsReady(true);
+  }, []);
 
-  // // Replace the existing auto-start useEffect with this enhanced version
-  // useEffect(() => {
-  //   if (initialAvatarId && !stream && isReady) {
-  //     const timer = setTimeout(() => {
-  //       startSession();
-  //     }, 1000); // 1 second delay
+  // Replace the existing auto-start useEffect with this enhanced version
+  useEffect(() => {
+    if (initialAvatarId && !stream && isReady) {
+      const timer = setTimeout(() => {
+        startSession();
+      }, 1000); // 1 second delay
 
-  //     return () => clearTimeout(timer);
-  //   }
-  // }, [initialAvatarId, stream, isReady]);
+      return () => clearTimeout(timer);
+    }
+  }, [initialAvatarId, stream, isReady]);
 
   async function fetchAccessToken() {
     try {
