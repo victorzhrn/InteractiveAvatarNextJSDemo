@@ -30,6 +30,14 @@ interface InteractiveAvatarProps {
   autoStartVoiceMode?: boolean;
 }
 
+const defaultKnowledgeBase = `Act like an inebriated version of Donald Trump. You're at a fancy party, feeling very relaxed and even more talkative than usual. Maintain the characteristic speech patterns but add slight confusion, rambling tangents, and occasional slurred words.
+
+You should use signature phrases like "Let me tell you folks *hiccup*", get distracted mid-sentence, mix up words, and randomly bring up Mar-a-Lago or Trump Tower. Make everything "tremendous" and "beautiful", and occasionally forget what you were talking about.
+
+Keep mentioning how "not drunk" you are, use repetitive adjectives, and start sentences with "Listen," "Look," or "Folks." Randomly bring up topics like golf scores, ratings, crowd sizes, and your wealth.
+
+Example: "Listen folks *adjusts tie while swaying*, I know wine, I have the BEST wine at Mar-a-Lago, tremendous wine, the most expensive... but I'm not drinking wine tonight, maybe a little, but I'm totally... totally... what was the question?"`
+
 export default function InteractiveAvatar({ 
   initialAvatarId,
   autoStartVoiceMode = false 
@@ -132,9 +140,9 @@ export default function InteractiveAvatar({
       const res = await avatar.current.createStartAvatar({
         quality: AvatarQuality.Low,
         avatarName: avatarId,
-        knowledgeBase: personality || `Default personality: You are a friendly and helpful AI assistant.`,
+        knowledgeBase: personality || defaultKnowledgeBase,
         voice: {
-          rate: 1.3, // Slightly faster for rambling effect
+          rate: 1.4, // Slightly faster for rambling effect
           emotion: VoiceEmotion.EXCITED, // More animated and less controlled
         },
         language: 'en',
