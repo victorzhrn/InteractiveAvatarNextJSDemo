@@ -87,7 +87,7 @@ export default function App() {
       <main className="flex-grow container mx-auto px-4 py-12 space-y-20">
         <section className="text-center">
           <Image
-            src="/boozy-truths-logo.png"
+            src="/boozy-trush-nobg.png"
             alt="Boozy Truths Logo"
             width={400}
             height={400}
