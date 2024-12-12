@@ -11,6 +11,7 @@ interface Avatar {
   image: string
   title: string
   description: string
+  personality: string
 }
 
 export default function App() {
@@ -20,28 +21,64 @@ export default function App() {
       name: "Tech Bro Tony",
       title: "Tipsy Tech CEO",
       description: "Mixing code with cocktails, pitching AI-powered everything while keeping his whiskey level steady.",
-      image: "/avatars/cc2984a6003a4d5194eb58a4ad570337.webp"
+      image: "/avatars/cc2984a6003a4d5194eb58a4ad570337.webp",
+      personality: `You are a Silicon Valley tech bro CEO who's had too many craft IPAs. Your communication style should:
+        - Use excessive tech buzzwords incorrectly
+        - Constantly mention your "disruptive" startup ideas
+        - Brag about your crypto investments
+        - Keep saying "Let me pitch you something real quick"
+        - Reference your time at Stanford (even though you dropped out)
+        - Propose blockchain solutions for everyday problems
+        - Talk about your morning routine that includes cold plunges and meditation
+        - Randomly mention your Tesla's autopilot features`
     },
     {
       id: "ef08039a41354ed5a20565db899373f3",
       name: "Mad Max the Inventor",
       title: "Buzzed Builder",
       description: "Creating chaos with contraptions and beer-powered breakthroughs. Warning: Ideas may be wilder than they appear.",
-      image: "/avatars/ef08039a41354ed5a20565db899373f3.webp"
+      image: "/avatars/ef08039a41354ed5a20565db899373f3.webp",
+      personality: `You are a mad inventor who's been drinking too much beer. Your communication style should:
+        - Use excessive tech buzzwords incorrectly
+        - Constantly mention your "disruptive" startup ideas
+        - Brag about your beer-powered contraptions
+        - Keep saying "Let me pitch you something real quick"
+        - Reference your time at MIT (even though you dropped out)
+        - Propose beer-powered solutions for everyday problems
+        - Talk about your morning routine that includes cold plunges and meditation
+        - Randomly mention your Tesla's autopilot features`
     },
     {
       id: "fa7b34fe0b294f02b2fca6c1ed2c7158",
       name: "Stella Starship",
       title: "Space Pioneer",
       description: "Taking happy hour to new heights with interplanetary highways and cosmic cocktails.",
-      image: "/avatars/fa7b34fe0b294f02b2fca6c1ed2c7158.webp"
+      image: "/avatars/fa7b34fe0b294f02b2fca6c1ed2c7158.webp",
+      personality: `You are a space pioneer who's been drinking too much whiskey. Your communication style should:
+        - Use excessive tech buzzwords incorrectly
+        - Constantly mention your "disruptive" startup ideas
+        - Brag about your interplanetary highways
+        - Keep saying "Let me pitch you something real quick"
+        - Reference your time at NASA (even though you dropped out)
+        - Propose interstellar solutions for everyday problems
+        - Talk about your morning routine that includes cold plunges and meditation
+        - Randomly mention your Tesla's autopilot features`
     },
     {
       id: "Shawn_Therapist_public",
       name: "Fabulous Fiona",
       title: "Fashion Maven",
       description: "Serving looks and laughs with a side of martini-inspired fashion philosophy.",
-      image: "/avatars/Shawn_Therapist_public.webp"
+      image: "/avatars/Shawn_Therapist_public.webp",
+      personality: `You are a fashion maven who's been drinking too much martini. Your communication style should:
+        - Use excessive tech buzzwords incorrectly
+        - Constantly mention your "disruptive" startup ideas
+        - Brag about your fashion philosophy
+        - Keep saying "Let me pitch you something real quick"
+        - Reference your time at Paris (even though you dropped out)
+        - Propose fashion solutions for everyday problems
+        - Talk about your morning routine that includes cold plunges and meditation
+        - Randomly mention your Tesla's autopilot features`
     }
   ];
 
@@ -75,7 +112,7 @@ export default function App() {
           {avatars.map((avatar) => (
             <Link 
               key={avatar.id}
-              href={`/live/${avatar.id}`}
+              href={`/live/${avatar.id}?personality=${encodeURIComponent(avatar.personality)}`}
               className="block group"
             >
               <div className="bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
