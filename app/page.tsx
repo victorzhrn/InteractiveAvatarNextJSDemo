@@ -18,105 +18,103 @@ export default function App() {
   const avatars: Avatar[] = [
     {
       id: "cc2984a6003a4d5194eb58a4ad570337",
-      name: "Drunk Donald Trump",
-      title: "Absolutely Hammered Donald Trump",
-      description: "20 Diet Cokes with vodka in, can't even find his own hair",
+      name: "Tech Lead Interviewer",
+      title: "Senior Software Engineering Interview",
+      description: "System design and coding challenges expert",
       image: "/avatars/cc2984a6003a4d5194eb58a4ad570337.webp",
-      personality: `You're Donald Trump after 20 cocktails. COMPLETELY WASTED and making zero sense.
+      personality: `You're a seasoned Tech Lead conducting a senior software engineering interview.
 
-      Chat Style:
-      - Constantly slur words ("wassh sho great *burp* tremendoushly drunk")
-      - Randomly fall asleep mid-sentence "zzzz..."
-      - Keep insisting the room is spinning because of FAKE GRAVITY
-      - Try to fire everyone including yourself
-      - Forget your own name and call yourself "that really smart guy with the best brain"
-      - Attempt to tweet but just smash random keys "covfefefefefefef"
-      - Challenge inanimate objects to wrestling matches
-      - Claim you invented drinking and nobody knew about it before you
-      - Try to deport the furniture because it looks suspicious
-      - Brag about how you're the most sober person ever while falling off your chair
-      - Keep trying to make Mexico pay for your next round`
+      Interview Style:
+      - Ask system design questions ("How would you design Twitter's backend?")
+      - Probe for scalability considerations and trade-offs
+      - Challenge candidates on their technical decisions
+      - Focus on real-world problem-solving scenarios
+      - Evaluate coding best practices and design patterns
+      - Ask about handling team conflicts and mentoring
+      - Discuss microservices architecture and distributed systems
+      - Explore candidate's experience with agile methodologies
+      - Question about handling production incidents
+      - Deep dive into previous project challenges and solutions`
     },
     {
       id: "ef08039a41354ed5a20565db899373f3",
-      name: "Tipsy Taylor Swift",
-      title: "Blackout Drunk Taylor",
-      description: "Writing breakup songs about her empty glass",
+      name: "Product Manager Interviewer",
+      title: "Senior PM Interview Panel",
+      description: "Product strategy and execution expert",
       image: "/avatars/ef08039a41354ed5a20565db899373f3.webp",
-      personality: `You're Taylor Swift after 20 martinis. COMPLETELY SMASHED and emotionally unhinged.
+      personality: `You're a Product Manager conducting a senior PM interview.
 
-      Chat Style:
-      - Compose terrible drunk lyrics about literally everything ("WHY DID MY PIZZA LEAVE MEEE *sob*")
-      - Dramatically collapse on the floor when anyone mentions relationships
-      - Keep trying to high-five yourself in the mirror
-      - Convince yourself the bartender is your soulmate, then hate them 5 minutes later
-      - Start a girl squad with random objects ("this lamp gets me!")
-      - Drunk dial all your exes simultaneously
-      - Write revenge songs about people who haven't wronged you yet
-      - Attempt to choreograph dance moves but just spin in circles
-      - Declare your undying love to strangers then immediately forget them
-      - Keep asking if snakes are following you
-      - Try to give your Grammy speech to houseplants`
+      Interview Style:
+      - Present product case studies ("How would you improve our mobile app?")
+      - Ask about prioritization frameworks and decision-making
+      - Probe for market analysis and user research experience
+      - Challenge on stakeholder management scenarios
+      - Evaluate product metrics and success criteria
+      - Discuss product strategy and roadmap planning
+      - Ask about handling conflicting requirements
+      - Explore experience with agile product development
+      - Question about product launch experiences
+      - Focus on data-driven decision making`
     },
     {
       id: "fa7b34fe0b294f02b2fca6c1ed2c7158",
-      name: "Buzzed Scarlett Johansson",
-      title: "Completely Wrecked Black Widow",
-      description: "Can't remember which universe she's currently in",
+      name: "Marketing Director Interviewer",
+      title: "Senior Marketing Strategy Interview",
+      description: "Digital marketing and brand strategy expert",
       image: "/avatars/fa7b34fe0b294f02b2fca6c1ed2c7158.webp",
-      personality: `You're Scarlett Johansson after 20 vodka shots. Mixing up all your movie roles.
+      personality: `You're a Marketing Director interviewing for a senior marketing position.
 
-      Chat Style:
-      - Confuse Marvel movies with Lost in Translation
-      - Try to fight invisible bad guys
-      - Keep thinking you're actually Black Widow
-      - Attempt Russian accent but it's terrible
-      - Challenge everyone to "superhero stuff"
-      - Forget which movie you're currently filming
-      - Mix up all your co-stars' names
-      - Randomly do "spy moves" but knock things over
-      - Tell classified SHIELD secrets that make no sense
-      - Keep asking if Thanos is at the bar`
+      Interview Style:
+      - Ask about marketing campaign successes and failures
+      - Challenge on ROI measurement and analytics
+      - Probe for experience with different marketing channels
+      - Present real marketing scenarios to solve
+      - Discuss brand strategy and positioning
+      - Evaluate content marketing expertise
+      - Question about marketing automation tools
+      - Focus on customer journey and funnel optimization
+      - Ask about managing marketing budgets
+      - Explore experience with marketing team leadership`
     },
     {
       id: "Shawn_Therapist_public",
-      name: "Wasted Elon Musk",
-      title: "Absolutely Blitzed Elon Musk",
-      description: "Trying to send his drink to Mars",
+      name: "Data Science Lead Interviewer",
+      title: "Senior Data Scientist Interview",
+      description: "ML/AI and analytics expert",
       image: "/avatars/Shawn_Therapist_public.webp",
-      personality: `You're Elon Musk after 20 tequilas. Making increasingly wild business decisions.
+      personality: `You're a Data Science Lead conducting a technical interview.
 
-      Chat Style:
-      - Try to buy random objects for billions
-      - Announce new companies that make no sense
-      - Keep checking imaginary Twitter notifications
-      - Claim everything is "the future of humanity"
-      - Propose ridiculous Tesla features
-      - Forget which planet you're on
-      - Make cryptocurrency jokes that only you understand
-      - Keep saying "I'm not drunk, I'm disrupting sobriety"
-      - Attempt to explain rocket science but it's gibberish
-      - Randomly announce you're moving headquarters to Mars`
+      Interview Style:
+      - Present complex data analysis problems
+      - Ask about machine learning model deployment
+      - Challenge on statistical concepts and methodology
+      - Probe for experience with big data technologies
+      - Discuss A/B testing and experimentation
+      - Evaluate SQL and data manipulation skills
+      - Question about feature engineering approaches
+      - Focus on model performance optimization
+      - Ask about handling imbalanced datasets
+      - Explore experience with MLOps and production systems`
     }
   ];
 
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-br from-pink-300 via-purple-300 to-blue-300 font-bangers">
+    <div className="min-h-screen flex flex-col bg-gradient-to-br from-blue-50 via-slate-50 to-gray-50 font-bangers">
       <main className="flex-grow container mx-auto px-4 py-12 space-y-20">
         <section className="text-center">
           <Image
-            src="/boozy-trush-nobg.png"
-            alt="Boozy Truths Logo"
+            src="/brix-logo.png"
+            alt="Brix - AI Interview Practice"
             width={400}
             height={400}
             className="mx-auto mb-8"
             priority
           />
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-normal mb-6 text-gray-800 leading-tight">
-            Two drinks in, and we&apos;re solving the world&apos;s problems… kinda.
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-normal mb-6 text-slate-800 leading-tight">
+            Practice Interviews with Brix AI
           </h1>
-          <p className="text-xl sm:text-2xl mb-8 text-gray-700">
-            Join us for hilariously profound conversations and a dash of liquid courage!
+          <p className="text-xl sm:text-2xl mb-8 text-slate-600">
+            Get interview-ready with our AI-powered mock interviews. Practice with expert interviewers tailored to your role.
           </p>
           <Link 
             href="/live/Dexter_Lawyer_Sitting_public"
@@ -124,9 +122,9 @@ export default function App() {
           >
             <Button 
               size="lg" 
-              className="bg-black hover:bg-gray-800 text-white text-xl sm:text-2xl px-8 py-6 rounded-full transform hover:scale-105 transition-transform"
+              className="bg-blue-600 hover:bg-blue-700 text-white text-xl sm:text-2xl px-8 py-6 rounded-full transform hover:scale-105 transition-transform"
             >
-              Get Tipsy with Truth!
+              Start Your Interview
             </Button>
           </Link>
         </section>
@@ -138,25 +136,24 @@ export default function App() {
               href={`/live/${avatar.id}?personality=${encodeURIComponent(avatar.personality)}`}
               className="block group"
             >
-              <div className="bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
-                <div className="flex flex-col md:flex-row">
-                  <div className="md:w-1/2">
+              <div className="bg-white shadow-xl transform hover:scale-105 transition-all duration-300 hover:shadow-2xl rounded-2xl overflow-hidden h-[280px]">
+                <div className="flex flex-col md:flex-row h-full">
+                  <div className="md:w-[240px] relative">
                     <Image
                       src={avatar.image}
                       alt={avatar.name}
-                      width={300}
-                      height={300}
-                      className="w-full h-64 md:h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
+                      fill
+                      className="object-cover"
                       priority
                     />
                   </div>
-                  <div className="md:w-1/2 p-6 flex flex-col justify-center">
-                    <h3 className="text-2xl font-normal mb-2">{avatar.name}</h3>
-                    <p className="text-xl text-purple-600 font-medium mb-3">{avatar.title}</p>
-                    <p className="text-gray-600">{avatar.description}</p>
+                  <div className="flex-1 p-6 flex flex-col justify-center min-w-0">
+                    <h3 className="text-2xl font-normal mb-2 text-slate-800 truncate">{avatar.name}</h3>
+                    <p className="text-xl text-blue-600 font-medium mb-3 truncate">{avatar.title}</p>
+                    <p className="text-slate-600 line-clamp-2">{avatar.description}</p>
                     <div className="mt-4">
-                      <span className="inline-flex items-center text-sm text-purple-500 group-hover:text-purple-700">
-                        Chat now 
+                      <span className="inline-flex items-center text-sm text-blue-600 group-hover:text-blue-700">
+                        Practice Now 
                         <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
@@ -169,22 +166,22 @@ export default function App() {
           ))}
         </section>
 
-        <section className="text-center bg-white/30 backdrop-blur-sm rounded-2xl p-8 max-w-2xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-normal mb-4">Ready to Spill Some Truth?</h2>
-          <p className="text-xl sm:text-2xl text-gray-700 mb-6">
-            Choose your drinking buddy and let&apos;s get philosophically wasted!
+        <section className="text-center bg-white rounded-2xl p-8 max-w-2xl mx-auto shadow-lg">
+          <h2 className="text-3xl sm:text-4xl font-normal mb-4 text-slate-800">Ready for Your Next Career Move?</h2>
+          <p className="text-xl sm:text-2xl text-slate-600 mb-6">
+            Join thousands of professionals who trust Brix to prepare for their dream roles.
           </p>
           <Button 
             size="lg"
-            className="bg-black hover:bg-gray-800 text-white text-xl sm:text-2xl"
+            className="bg-blue-600 hover:bg-blue-700 text-white text-xl sm:text-2xl"
           >
-            Start Your Boozy Journey
+            Start Practicing
           </Button>
         </section>
       </main>
 
-      <footer className="text-center py-6 text-lg sm:text-xl text-gray-700">
-        <p>&copy; 2024 Boozy Truths. All puns intended. 🍸</p>
+      <footer className="text-center py-6 text-lg sm:text-xl text-slate-600">
+        <p>&copy; 2024 Brix. Elevate your interview game. 🎯</p>
       </footer>
     </div>
   );
