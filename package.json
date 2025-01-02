@@ -26,6 +26,7 @@
     "@nextui-org/theme": "2.2.5",
     "@phosphor-icons/react": "^2.1.5",
     "@radix-ui/react-avatar": "^1.1.2",
+    "@radix-ui/react-scroll-area": "^1.2.2",
     "@radix-ui/react-slot": "^1.1.0",
     "@react-aria/ssr": "3.9.4",
     "@react-aria/visually-hidden": "3.8.12",
